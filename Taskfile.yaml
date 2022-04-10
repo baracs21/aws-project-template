@@ -23,7 +23,8 @@ includes:
     taskfile: ./cdk-base/deploy/Taskfile.yaml
 
 tasks:
-  default:
+  docs:
+    dir: ./docs
     cmds:
-      - echo "{{.GREETING}}"
+      - draw.io -x -f png -o arc.png arc.drawio
     silent: true
