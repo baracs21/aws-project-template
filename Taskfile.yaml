@@ -1,0 +1,29 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  AWS_ACCOUNT:
+    sh: echo $AWS_ACCOUNT_ID
+  AWS_PROFILE:
+    sh: echo $AWS_PROFILE
+  AWS_REGION:
+    sh: echo $AWS_REGION
+  ACTIONS_FILE_PATH:
+    sh: echo $PWD/actions.txt
+
+includes:
+  nuke:
+    taskfile: ./cdk-base/nuke-account/Taskfile.yaml
+    dir: ./cdk-base/nuke-account
+  bootstrap:
+    taskfile: ./cdk-base/bootstrap/Taskfile.yaml
+    dir: ./cdk-base/bootstrap
+  deploy:
+    taskfile: ./cdk-base/deploy/Taskfile.yaml
+
+tasks:
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
