@@ -26,5 +26,5 @@ tasks:
   docs:
     dir: ./docs
     cmds:
-      - draw.io -x -f png -o arc.png arc.drawio
+      - drawio -x -f png -o arc.png arc.drawio
     silent: true
