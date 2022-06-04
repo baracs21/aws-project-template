@@ -10,7 +10,7 @@ vars:
   AWS_REGION:
     sh: echo $AWS_REGION
   ACTIONS_FILE_PATH:
-    sh: echo $PWD/actions.txt
+    sh: echo $PWD/actions
 
 includes:
   nuke:
