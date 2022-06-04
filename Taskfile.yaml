@@ -20,7 +20,7 @@ includes:
     taskfile: ./cdk-base/bootstrap/Taskfile.yaml
     dir: ./cdk-base/bootstrap
   deploy:
-    taskfile: ./cdk-base/deploy/Taskfile.yaml
+    taskfile: ./cdk-base/common/Taskfile.yaml
 
 tasks:
   docs:
