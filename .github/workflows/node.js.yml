@@ -23,7 +23,5 @@ jobs:
     - name: Init
       run: |
         cd infrastructure
-    - name: Install Composer Dependencies
-      run: |
         npm install -g aws-cdk  
         npm ci
