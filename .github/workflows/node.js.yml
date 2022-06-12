@@ -20,9 +20,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        submodules: 'true'
+    - name: Install Task
+      uses: arduino/setup-task@v1
     - name: Init
       run: |
-        cd infrastructure
-        npm install -g aws-cdk  
-        npm ci
-        cdk synth
+        task common:build
+
