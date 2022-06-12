@@ -24,6 +24,9 @@ jobs:
         submodules: 'true'
     - name: Install Task
       uses: arduino/setup-task@v1
+    - name: Install PreConditions
+      run: |
+        npm install -g aws-cdk
     - name: Init
       run: |
         task common:build
