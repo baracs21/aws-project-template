@@ -27,6 +27,7 @@ jobs:
     - name: Install PreConditions
       run: |
         npm install -g aws-cdk
+        npm install typescript@latest ts-node@latest
     - name: Init
       run: |
         task common:build
