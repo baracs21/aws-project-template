@@ -25,3 +25,4 @@ jobs:
         cd infrastructure
         npm install -g aws-cdk  
         npm ci
+        cdk synth
